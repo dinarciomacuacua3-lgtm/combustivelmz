@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Preços de Combustível em Moçambique 2026 | CombustívelMZ</title>
+<meta name="description" content="Consulte os preços actuais de combustível em Moçambique. Gasolina, Gasóleo e Petróleo Iluminante por zona geográfica. Actualizado mensalmente.">
+<meta name="keywords" content="preços combustível Moçambique, gasolina Maputo, gasóleo Moçambique, petróleo Moçambique, combustível MZN 2026">
+<meta property="og:title" content="CombustívelMZ — Preços de Combustível em Moçambique">
+<meta property="og:description" content="Preços oficiais de combustível em Moçambique, actualizados mensalmente.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #00a859;
+    --green-dark: #007a40;
+    --green-light: #e6f7ef;
+    --green-mid: #c0e9d5;
+    --yellow: #f5c800;
+    --yellow-light: #fef9e0;
+    --red: #d40000;
+    --black: #111111;
+    --gray-100: #f5f5f3;
+    --gray-200: #e8e8e4;
+    --gray-300: #d0d0cc;
+    --gray-400: #9a9a94;
+    --gray-600: #555550;
+    --white: #ffffff;
+    --radius: 12px;
+    --radius-sm: 8px;
+    --shadow: 0 2px 12px rgba(0,0,0,0.06);
+    --shadow-md: 0 4px 24px rgba(0,0,0,0.09);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--gray-100);
+    color: var(--black);
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* ── HEADER ── */
+  header {
+    background: var(--black);
+    padding: 0 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 3px solid var(--green);
+  }
+  .header-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+  }
+  .logo {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--white);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .logo span { color: var(--green); }
+  nav { display: flex; gap: 20px; align-items: center; }
+  nav a { color: #aaa; font-size: 13px; text-decoration: none; transition: color 0.15s; }
+  nav a:hover { color: var(--white); }
+  .update-pill {
+    background: var(--green);
+    color: var(--white);
+    font-size: 11px;
+    font-weight: 500;
+    padding: 4px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.03em;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .pulse {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: #fff;
+    animation: pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.7); }
+  }
+
+  /* ── BANNER PUBLICITÁRIO (estilo neutro e discreto) ── */
+  .ad-banner {
+    background: var(--gray-200);
+    text-align: center;
+    padding: 10px;
+    font-size: 11px;
+    color: var(--gray-400);
+    letter-spacing: 0.05em;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /* Quando AdSense estiver activo, o texto "Publicidade" aparece automaticamente */
+  .ad-banner ins { display: block; width: 100%; }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--black);
+    padding: 2rem 1.5rem 2.5rem;
+    color: var(--white);
+  }
+  .hero-inner { max-width: 1000px; margin: 0 auto; }
+  .hero h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(24px, 5vw, 38px);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+  .hero h1 em { color: var(--green); font-style: normal; }
+  .hero p { color: #aaa; font-size: 14px; max-width: 500px; }
+  .hero-meta {
+    display: flex;
+    gap: 10px;
+    margin-top: 1.25rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .meta-chip {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 20px;
+    padding: 5px 12px;
+    font-size: 12px;
+    color: #ccc;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .meta-chip .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); }
+  .timestamp-chip {
+    background: rgba(0,168,89,0.15);
+    border: 1px solid rgba(0,168,89,0.3);
+    border-radius: 20px;
+    padding: 5px 12px;
+    font-size: 12px;
+    color: #6fdeaa;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  /* ── ALERTAS / AVISO ── */
+  .aviso-bar {
+    background: var(--yellow-light);
+    border-bottom: 1px solid #f0d000;
+    padding: 8px 1.5rem;
+    font-size: 12px;
+    color: #7a5f00;
+    text-align: center;
+  }
+
+  /* ── MAIN ── */
+  .main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1.5rem 1.5rem 3rem;
+  }
+
+  /* ── ZONE SELECTOR ── */
+  .section-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: var(--gray-400);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .zones {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+  }
+  .zone-btn {
+    background: var(--white);
+    border: 1.5px solid var(--gray-200);
+    border-radius: 20px;
+    padding: 7px 16px;
+    font-size: 13px;
+    font-family: 'DM Sans', sans-serif;
+    cursor: pointer;
+    color: var(--gray-600);
+    transition: all 0.15s;
+    font-weight: 400;
+  }
+  .zone-btn:hover { border-color: var(--green); color: var(--green-dark); }
+  .zone-btn.active {
+    background: var(--green);
+    border-color: var(--green);
+    color: var(--white);
+    font-weight: 500;
+  }
+
+  /* ── FUEL CARDS ── */
+  .fuel-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 12px;
+    margin-bottom: 2rem;
+  }
+  .fuel-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    border: 1px solid var(--gray-200);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.15s, box-shadow 0.15s;
+    box-shadow: var(--shadow);
+  }
+  .fuel-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .fuel-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--green);
+  }
+  .fuel-card.gasoleo::before { background: var(--yellow); }
+  .fuel-card.petroleo::before { background: var(--gray-400); }
+  .fuel-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+  }
+  .fuel-label { font-size: 12px; color: var(--gray-400); font-weight: 500; letter-spacing: 0.03em; }
+  .fuel-badge {
+    font-size: 10px;
+    font-weight: 500;
+    padding: 3px 8px;
+    border-radius: 20px;
+    letter-spacing: 0.04em;
+  }
+  .badge-up { background: #fde8e8; color: #b91c1c; }
+  .badge-down { background: #e6f7ef; color: #007a40; }
+  .badge-same { background: var(--gray-200); color: var(--gray-600); }
+  .fuel-price-row { display: flex; align-items: baseline; gap: 4px; margin-bottom: 4px; }
+  .fuel-price {
+    font-family: 'Syne', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--black);
+    line-height: 1;
+  }
+  .fuel-curr { font-size: 13px; color: var(--gray-400); }
+  .fuel-unit { font-size: 12px; color: var(--gray-400); }
+  .fuel-change {
+    font-size: 12px;
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .change-up { color: #b91c1c; }
+  .change-down { color: var(--green-dark); }
+  .change-same { color: var(--gray-400); }
+  .arrow-up::before { content: '↑'; }
+  .arrow-down::before { content: '↓'; }
+  .arrow-same::before { content: '—'; }
+
+  /* ── CALCULADORA ── */
+  .calc-section {
+    background: var(--white);
+    border-radius: var(--radius);
+    border: 1px solid var(--gray-200);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow);
+  }
+  .calc-header { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; }
+  .calc-title { font-family: 'Syne', sans-serif; font-size: 17px; font-weight: 600; }
+  .calc-sub { font-size: 13px; color: var(--gray-400); margin-bottom: 1.25rem; }
+  .calc-row { display: flex; gap: 12px; flex-wrap: wrap; align-items: flex-end; }
+  .calc-field { display: flex; flex-direction: column; gap: 6px; flex: 1; min-width: 130px; }
+  .calc-field label { font-size: 12px; color: var(--gray-600); font-weight: 500; }
+  .calc-field input, .calc-field select {
+    border: 1.5px solid var(--gray-200);
+    border-radius: var(--radius-sm);
+    padding: 10px 12px;
+    font-size: 15px;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--black);
+    background: var(--white);
+    outline: none;
+    transition: border-color 0.15s;
+  }
+  .calc-field input:focus, .calc-field select:focus { border-color: var(--green); }
+  .calc-btn {
+    background: var(--green);
+    color: var(--white);
+    border: none;
+    border-radius: var(--radius-sm);
+    padding: 10px 20px;
+    font-size: 14px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.15s;
+    white-space: nowrap;
+    height: 44px;
+  }
+  .calc-btn:hover { background: var(--green-dark); }
+  .calc-result {
+    margin-top: 1rem;
+    background: var(--green-light);
+    border-radius: var(--radius-sm);
+    padding: 1rem 1.25rem;
+    display: none;
+    border: 1px solid var(--green-mid);
+  }
+  .calc-result.visible { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+  .calc-result-label { font-size: 12px; color: var(--green-dark); font-weight: 500; margin-bottom: 4px; }
+  .calc-result-value { font-family: 'Syne', sans-serif; font-size: 28px; font-weight: 700; color: var(--green-dark); }
+  .calc-result-detail { font-size: 12px; color: var(--green-dark); opacity: 0.7; }
+  .share-btn {
+    background: var(--green-dark);
+    color: var(--white);
+    border: none;
+    border-radius: var(--radius-sm);
+    padding: 8px 14px;
+    font-size: 12px;
+    font-family: 'DM Sans', sans-serif;
+    cursor: pointer;
+    transition: background 0.15s;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .share-btn:hover { background: #005a2e; }
+
+  /* ── HISTÓRICO ── */
+  .history-section {
+    background: var(--white);
+    border-radius: var(--radius);
+    border: 1px solid var(--gray-200);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    overflow-x: auto;
+    box-shadow: var(--shadow);
+  }
+  .history-header { display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 1.25rem; }
+  .history-title { font-family: 'Syne', sans-serif; font-size: 17px; font-weight: 600; margin-bottom: 4px; }
+  .history-sub { font-size: 13px; color: var(--gray-400); }
+  .history-filters { display: flex; gap: 6px; flex-wrap: wrap; }
+  .hist-filter-btn {
+    background: var(--gray-100);
+    border: 1px solid var(--gray-200);
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-size: 12px;
+    font-family: 'DM Sans', sans-serif;
+    cursor: pointer;
+    color: var(--gray-600);
+    transition: all 0.12s;
+  }
+  .hist-filter-btn.active { background: var(--black); color: var(--white); border-color: var(--black); }
+
+  table { width: 100%; border-collapse: collapse; min-width: 420px; }
+  thead th {
+    text-align: left;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--gray-400);
+    padding: 0 8px 10px;
+    border-bottom: 1px solid var(--gray-200);
+  }
+  tbody tr { transition: background 0.1s; }
+  tbody tr:hover { background: var(--gray-100); }
+  tbody tr:first-child td { font-weight: 500; }
+  tbody td {
+    padding: 11px 8px;
+    font-size: 14px;
+    border-bottom: 1px solid var(--gray-200);
+    color: var(--black);
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  .td-up { color: #b91c1c; font-weight: 500; }
+  .td-down { color: var(--green-dark); font-weight: 500; }
+  .td-same { color: var(--gray-400); }
+  .badge-current {
+    background: var(--green);
+    color: var(--white);
+    font-size: 10px;
+    padding: 2px 7px;
+    border-radius: 10px;
+    margin-left: 6px;
+    font-weight: 500;
+    vertical-align: middle;
+  }
+
+  /* ── CHART ── */
+  .chart-wrap {
+    margin-top: 1.25rem;
+    height: 160px;
+    position: relative;
+    border-top: 1px solid var(--gray-200);
+    padding-top: 1rem;
+    display: none;
+  }
+  .chart-wrap.visible { display: block; }
+  .chart-svg { width: 100%; height: 140px; }
+  .chart-toggle {
+    background: none;
+    border: 1px solid var(--gray-200);
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-size: 12px;
+    font-family: 'DM Sans', sans-serif;
+    cursor: pointer;
+    color: var(--gray-600);
+    transition: all 0.12s;
+    margin-top: 0.75rem;
+  }
+  .chart-toggle:hover { border-color: var(--green); color: var(--green-dark); }
+
+  /* ── INFO BOX ── */
+  .info-box {
+    background: #fffbea;
+    border: 1px solid #f5c800;
+    border-radius: var(--radius);
+    padding: 1rem 1.25rem;
+    font-size: 13px;
+    color: #7a6000;
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    line-height: 1.6;
+  }
+  .info-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+
+  /* ── NEWSLETTER / ALERTA ── */
+  .alert-section {
+    background: var(--black);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .alert-text h3 { font-family: 'Syne', sans-serif; font-size: 16px; font-weight: 600; color: var(--white); margin-bottom: 4px; }
+  .alert-text p { font-size: 13px; color: #aaa; }
+  .alert-form { display: flex; gap: 8px; flex-wrap: wrap; }
+  .alert-input {
+    border: 1px solid #333;
+    background: #1a1a1a;
+    border-radius: var(--radius-sm);
+    padding: 9px 14px;
+    font-size: 13px;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--white);
+    outline: none;
+    min-width: 200px;
+    transition: border-color 0.15s;
+  }
+  .alert-input:focus { border-color: var(--green); }
+  .alert-input::placeholder { color: #555; }
+  .alert-btn {
+    background: var(--green);
+    color: var(--white);
+    border: none;
+    border-radius: var(--radius-sm);
+    padding: 9px 18px;
+    font-size: 13px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.15s;
+  }
+  .alert-btn:hover { background: var(--green-dark); }
+  .alert-msg { font-size: 12px; color: var(--green); margin-top: 6px; display: none; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--black);
+    color: #888;
+    font-size: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    line-height: 1.8;
+  }
+  footer strong { color: var(--white); }
+  footer a { color: #888; text-decoration: none; }
+  footer a:hover { color: #aaa; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 600px) {
+    .fuel-grid { grid-template-columns: 1fr 1fr; }
+    .fuel-price { font-size: 26px; }
+    .hero h1 { font-size: 24px; }
+    .alert-section { flex-direction: column; }
+    .alert-input { min-width: 100%; }
+    nav .update-pill span:not(.pulse) { display: none; }
+  }
+  @media (max-width: 400px) {
+    .fuel-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo">🇲🇿 Combustível<span>MZ</span></a>
+    <nav>
+      <a href="sobre.html">Sobre</a>
+      <a href="privacidade.html">Privacidade</a>
+      <div class="update-pill">
+        <span class="pulse"></span>
+        <span>Actualizado: Maio 2026</span>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- ADSENSE TOPO — substituir pelo código do Google AdSense quando aprovado -->
+<div class="ad-banner">
+  <!-- Cole aqui o código ins do Google AdSense -->
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <h1>Preços de <em>Combustível</em><br>em Moçambique</h1>
+    <p>Preços oficiais regulados pelo Conselho de Ministros. Consulte por zona geográfica.</p>
+    <div class="hero-meta">
+      <div class="meta-chip"><span class="dot"></span> Preços em MZN / litro</div>
+      <div class="meta-chip"><span class="dot"></span> Válido: Maio 2026</div>
+      <div class="meta-chip"><span class="dot"></span> 5 zonas disponíveis</div>
+      <div class="timestamp-chip" id="last-update-chip">⏱ A carregar...</div>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+  <!-- ZONE SELECTOR -->
+  <div class="section-label">Seleccionar zona geográfica</div>
+  <div class="zones">
+    <button class="zone-btn active" onclick="setZone(this,'maputo')">📍 Maputo</button>
+    <button class="zone-btn" onclick="setZone(this,'beira')">📍 Beira</button>
+    <button class="zone-btn" onclick="setZone(this,'nampula')">📍 Nampula</button>
+    <button class="zone-btn" onclick="setZone(this,'tete')">📍 Tete</button>
+    <button class="zone-btn" onclick="setZone(this,'nacala')">📍 Nacala</button>
+  </div>
+
+  <!-- FUEL CARDS -->
+  <div class="section-label" id="prices-label">Preços actuais — Maputo</div>
+  <div class="fuel-grid" id="fuel-grid"></div>
+
+  <!-- CALCULADORA -->
+  <div class="calc-section">
+    <div class="calc-header">
+      <span style="font-size:20px">⛽</span>
+      <div class="calc-title">Calculadora de Abastecimento</div>
+    </div>
+    <div class="calc-sub">Calcule quanto vai pagar no próximo abastecimento</div>
+    <div class="calc-row">
+      <div class="calc-field">
+        <label>Tipo de combustível</label>
+        <select id="calc-fuel">
+          <option value="gasolina95">Gasolina 95</option>
+          <option value="gasolina80">Gasolina 80</option>
+          <option value="gasoleo">Gasóleo</option>
+          <option value="petroleo">Petróleo Iluminante</option>
+        </select>
+      </div>
+      <div class="calc-field">
+        <label>Litros a abastecer</label>
+        <input type="number" id="calc-litros" placeholder="Ex: 30" min="1" max="500" step="0.5">
+      </div>
+      <button class="calc-btn" onclick="calcular()">Calcular →</button>
+    </div>
+    <div class="calc-result" id="calc-result">
+      <div>
+        <div class="calc-result-label">Total a pagar</div>
+        <div class="calc-result-value" id="calc-total">0 MZN</div>
+        <div class="calc-result-detail" id="calc-detail"></div>
+      </div>
+      <button class="share-btn" onclick="partilhar()">📤 Partilhar</button>
+    </div>
+  </div>
+
+  <!-- ADSENSE MEIO — substituir pelo código do Google AdSense quando aprovado -->
+  <div class="ad-banner" style="margin-bottom:2rem;">
+    <!-- Cole aqui o código ins do Google AdSense -->
+  </div>
+
+  <!-- HISTÓRICO -->
+  <div class="history-section">
+    <div class="history-header">
+      <div>
+        <div class="history-title">📊 Histórico de Preços</div>
+        <div class="history-sub">Evolução nos últimos 6 meses — <span id="hist-zone-label">Maputo</span></div>
+      </div>
+      <div class="history-filters">
+        <button class="hist-filter-btn active" onclick="setHistFilter(this,'gasolina95')">Gasolina 95</button>
+        <button class="hist-filter-btn" onclick="setHistFilter(this,'gasolina80')">Gasolina 80</button>
+        <button class="hist-filter-btn" onclick="setHistFilter(this,'gasoleo')">Gasóleo</button>
+        <button class="hist-filter-btn" onclick="setHistFilter(this,'petroleo')">Petróleo</button>
+      </div>
+    </div>
+
+    <table id="hist-table">
+      <thead>
+        <tr>
+          <th>Mês</th>
+          <th id="hist-col-header">Gasolina 95</th>
+          <th>Variação</th>
+        </tr>
+      </thead>
+      <tbody id="hist-tbody"></tbody>
+    </table>
+
+    <button class="chart-toggle" onclick="toggleChart()">📈 Ver gráfico de evolução</button>
+    <div class="chart-wrap" id="chart-wrap">
+      <svg class="chart-svg" id="chart-svg" viewBox="0 0 600 120" preserveAspectRatio="none"></svg>
+    </div>
+  </div>
+
+  <!-- ALERTA DE PREÇOS -->
+  <div class="alert-section">
+    <div class="alert-text">
+      <h3>🔔 Receba alertas de preços</h3>
+      <p>Saiba imediatamente quando os preços mudam. Enviamos um email no início de cada mês.</p>
+    </div>
+    <div>
+      <div class="alert-form">
+        <input type="email" class="alert-input" id="alert-email" placeholder="o_seu@email.com">
+        <button class="alert-btn" onclick="subscrever()">Subscrever</button>
+      </div>
+      <div class="alert-msg" id="alert-msg">✓ Subscrito com sucesso! Receberá o próximo alerta em Junho.</div>
+    </div>
+  </div>
+
+  <!-- INFO BOX -->
+  <div class="info-box">
+    <span class="info-icon">ℹ️</span>
+    <span>
+      <strong>Como funcionam os preços?</strong> Os preços de combustível em Moçambique são fixados mensalmente pelo <strong>Conselho de Ministros</strong> através do Ministério dos Recursos Minerais e Energia. Os preços variam por zona geográfica devido aos custos de transporte. A tabela oficial é publicada no <strong>Boletim da República</strong>.
+    </span>
+  </div>
+
+</div><!-- fim main -->
+
+<!-- ADSENSE RODAPÉ — substituir pelo código do Google AdSense quando aprovado -->
+<div class="ad-banner">
+  <!-- Cole aqui o código ins do Google AdSense -->
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <strong>CombustívelMZ</strong> — Preços Oficiais de Combustível em Moçambique<br>
+  Fonte: Conselho de Ministros de Moçambique · Boletim da República<br>
+  <span>© 2026 CombustívelMZ · <a href="sobre.html">Sobre nós</a> · <a href="privacidade.html">Política de Privacidade</a></span>
+</footer>
+
+<script>
+// ── DADOS ──
+const ULTIMA_ACTUALIZACAO = '2026-05-01'; // ← Actualizar todo mês 1
+
+const precos = {
+  maputo:  { gasolina95: 92.50, gasolina80: 87.30, gasoleo: 85.40, petroleo: 62.10 },
+  beira:   { gasolina95: 94.20, gasolina80: 88.90, gasoleo: 87.10, petroleo: 63.50 },
+  nampula: { gasolina95: 96.10, gasolina80: 90.50, gasoleo: 89.00, petroleo: 65.20 },
+  tete:    { gasolina95: 97.30, gasolina80: 91.80, gasoleo: 90.20, petroleo: 66.10 },
+  nacala:  { gasolina95: 95.80, gasolina80: 90.10, gasoleo: 88.50, petroleo: 64.80 },
+};
+
+const nomes = {
+  maputo: 'Maputo', beira: 'Beira',
+  nampula: 'Nampula', tete: 'Tete', nacala: 'Nacala'
+};
+
+const combustiveis = [
+  { key: 'gasolina95', nome: 'Gasolina 95',        classe: '',         var: '+1,2%', dir: 'up'   },
+  { key: 'gasolina80', nome: 'Gasolina 80',        classe: '',         var: '+1,0%', dir: 'up'   },
+  { key: 'gasoleo',    nome: 'Gasóleo',             classe: 'gasoleo',  var: '−0,5%', dir: 'down' },
+  { key: 'petroleo',   nome: 'Petróleo Iluminante', classe: 'petroleo', var: '0,0%',  dir: 'same' },
+];
+
+// Histórico por combustível (Maputo, pode adaptar por zona)
+const historico = {
+  gasolina95: [
+    { mes: 'Maio 2026',     preco: 92.50, var: '+1,2%', dir: 'up' },
+    { mes: 'Abril 2026',    preco: 91.40, var: '−0,8%', dir: 'down' },
+    { mes: 'Março 2026',    preco: 92.10, var: '+2,3%', dir: 'up' },
+    { mes: 'Fevereiro 2026',preco: 90.00, var: '0,0%',  dir: 'same' },
+    { mes: 'Janeiro 2026',  preco: 90.00, var: '+1,5%', dir: 'up' },
+    { mes: 'Dezembro 2025', preco: 88.70, var: '−0,6%', dir: 'down' },
+  ],
+  gasolina80: [
+    { mes: 'Maio 2026',     preco: 87.30, var: '+1,0%', dir: 'up' },
+    { mes: 'Abril 2026',    preco: 86.40, var: '−0,7%', dir: 'down' },
+    { mes: 'Março 2026',    preco: 87.00, var: '+2,2%', dir: 'up' },
+    { mes: 'Fevereiro 2026',preco: 85.10, var: '0,0%',  dir: 'same' },
+    { mes: 'Janeiro 2026',  preco: 85.10, var: '+1,5%', dir: 'up' },
+    { mes: 'Dezembro 2025', preco: 83.80, var: '−0,5%', dir: 'down' },
+  ],
+  gasoleo: [
+    { mes: 'Maio 2026',     preco: 85.40, var: '−0,5%', dir: 'down' },
+    { mes: 'Abril 2026',    preco: 84.60, var: '−0,7%', dir: 'down' },
+    { mes: 'Março 2026',    preco: 85.20, var: '+2,3%', dir: 'up' },
+    { mes: 'Fevereiro 2026',preco: 83.30, var: '0,0%',  dir: 'same' },
+    { mes: 'Janeiro 2026',  preco: 83.30, var: '+1,5%', dir: 'up' },
+    { mes: 'Dezembro 2025', preco: 82.10, var: '−0,6%', dir: 'down' },
+  ],
+  petroleo: [
+    { mes: 'Maio 2026',     preco: 62.10, var: '0,0%',  dir: 'same' },
+    { mes: 'Abril 2026',    preco: 62.10, var: '0,0%',  dir: 'same' },
+    { mes: 'Março 2026',    preco: 62.10, var: '+1,0%', dir: 'up' },
+    { mes: 'Fevereiro 2026',preco: 61.50, var: '0,0%',  dir: 'same' },
+    { mes: 'Janeiro 2026',  preco: 61.50, var: '+1,2%', dir: 'up' },
+    { mes: 'Dezembro 2025', preco: 60.80, var: '−0,3%', dir: 'down' },
+  ],
+};
+
+const histNomes = { gasolina95: 'Gasolina 95', gasolina80: 'Gasolina 80', gasoleo: 'Gasóleo', petroleo: 'Petróleo Iluminante' };
+
+let zonaActual = 'maputo';
+let histFiltro = 'gasolina95';
+let chartVisivel = false;
+
+// ── TIMESTAMP ──
+function mostrarTimestamp() {
+  const d = new Date(ULTIMA_ACTUALIZACAO);
+  const opts = { day: 'numeric', month: 'long', year: 'numeric' };
+  const str = d.toLocaleDateString('pt-PT', opts);
+  document.getElementById('last-update-chip').textContent = '⏱ Actualizado: ' + str;
+}
+
+// ── ZONE ──
+function setZone(btn, zona) {
+  document.querySelectorAll('.zone-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  zonaActual = zona;
+  document.getElementById('prices-label').textContent = 'Preços actuais — ' + nomes[zona];
+  document.getElementById('hist-zone-label').textContent = nomes[zona];
+  renderCards();
+  document.getElementById('calc-result').classList.remove('visible');
+}
+
+// ── FUEL CARDS ──
+function renderCards() {
+  const d = precos[zonaActual];
+  const grid = document.getElementById('fuel-grid');
+  grid.innerHTML = combustiveis.map(f => {
+    const seta = f.dir === 'up' ? 'arrow-up' : f.dir === 'down' ? 'arrow-down' : 'arrow-same';
+    const corChange = f.dir === 'up' ? 'change-up' : f.dir === 'down' ? 'change-down' : 'change-same';
+    const badgeClass = f.dir === 'up' ? 'badge-up' : f.dir === 'down' ? 'badge-down' : 'badge-same';
+    const badgeText = f.dir === 'up' ? '▲ Subiu' : f.dir === 'down' ? '▼ Desceu' : '= Igual';
+    const precoFmt = d[f.key].toFixed(2).replace('.', ',');
+    return `
+      <div class="fuel-card ${f.classe}">
+        <div class="fuel-card-header">
+          <div class="fuel-label">${f.nome}</div>
+          <div class="fuel-badge ${badgeClass}">${badgeText}</div>
+        </div>
+        <div class="fuel-price-row">
+          <div class="fuel-price">${precoFmt}</div>
+          <div class="fuel-curr">MZN</div>
+        </div>
+        <div class="fuel-unit">por litro</div>
+        <div class="fuel-change ${corChange}">
+          <span class="${seta}"></span>
+          ${f.var} vs mês anterior
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+// ── CALCULADORA ──
+function calcular() {
+  const tipo = document.getElementById('calc-fuel').value;
+  const litros = parseFloat(document.getElementById('calc-litros').value);
+  if (!litros || litros <= 0) {
+    document.getElementById('calc-litros').focus();
+    return;
+  }
+  const preco = precos[zonaActual][tipo];
+  const total = (litros * preco).toFixed(2);
+  const totalFmt = parseFloat(total).toLocaleString('pt-PT', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+  const resultEl = document.getElementById('calc-result');
+  document.getElementById('calc-total').textContent = totalFmt + ' MZN';
+  const nomeComb = combustiveis.find(c => c.key === tipo).nome;
+  document.getElementById('calc-detail').textContent =
+    litros + ' L × ' + preco.toFixed(2).replace('.',',') + ' MZN (' + nomeComb + ', ' + nomes[zonaActual] + ')';
+  resultEl.classList.add('visible');
+}
+
+function partilhar() {
+  const texto = document.getElementById('calc-total').textContent;
+  const detalhe = document.getElementById('calc-detail').textContent;
+  const msg = 'CombustívelMZ: ' + detalhe + ' = ' + texto + '\nConsulte: combustivelmz.co.mz';
+  if (navigator.share) {
+    navigator.share({ title: 'CombustívelMZ', text: msg });
+  } else if (navigator.clipboard) {
+    navigator.clipboard.writeText(msg);
+    alert('Copiado para a área de transferência!');
+  }
+}
+
+// ── HISTÓRICO ──
+function setHistFilter(btn, filtro) {
+  document.querySelectorAll('.hist-filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  histFiltro = filtro;
+  document.getElementById('hist-col-header').textContent = histNomes[filtro];
+  renderHistorico();
+  if (chartVisivel) renderChart();
+}
+
+function renderHistorico() {
+  const dados = historico[histFiltro];
+  const tbody = document.getElementById('hist-tbody');
+  tbody.innerHTML = dados.map((row, i) => {
+    const tdClass = row.dir === 'up' ? 'td-up' : row.dir === 'down' ? 'td-down' : 'td-same';
+    const varIcon = row.dir === 'up' ? '↑' : row.dir === 'down' ? '↓' : '—';
+    const actual = i === 0 ? '<span class="badge-current">actual</span>' : '';
+    const precoFmt = row.preco.toFixed(2).replace('.', ',');
+    return `
+      <tr>
+        <td>${row.mes} ${actual}</td>
+        <td>${precoFmt} MZN</td>
+        <td class="${tdClass}">${varIcon} ${row.var}</td>
+      </tr>
+    `;
+  }).join('');
+}
+
+// ── GRÁFICO SIMPLES SVG ──
+function toggleChart() {
+  chartVisivel = !chartVisivel;
+  const wrap = document.getElementById('chart-wrap');
+  wrap.classList.toggle('visible', chartVisivel);
+  if (chartVisivel) renderChart();
+}
+
+function renderChart() {
+  const dados = [...historico[histFiltro]].reverse();
+  const precosList = dados.map(d => d.preco);
+  const min = Math.min(...precosList) - 1;
+  const max = Math.max(...precosList) + 1;
+  const W = 600, H = 110, padX = 20, padY = 10;
+  const xStep = (W - padX * 2) / (dados.length - 1);
+  const yScale = v => H - padY - ((v - min) / (max - min)) * (H - padY * 2);
+
+  const pts = dados.map((d, i) => [padX + i * xStep, yScale(d.preco)]);
+  const polyline = pts.map(p => p.join(',')).join(' ');
+  const area = `M${pts[0][0]},${H} ` + pts.map(p => `L${p[0]},${p[1]}`).join(' ') + ` L${pts[pts.length-1][0]},${H} Z`;
+
+  const svg = document.getElementById('chart-svg');
+  svg.innerHTML = `
+    <defs>
+      <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#00a859" stop-opacity="0.18"/>
+        <stop offset="100%" stop-color="#00a859" stop-opacity="0.02"/>
+      </linearGradient>
+    </defs>
+    <path d="${area}" fill="url(#chartGrad)"/>
+    <polyline points="${polyline}" fill="none" stroke="#00a859" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+    ${pts.map((p, i) => `
+      <circle cx="${p[0]}" cy="${p[1]}" r="3.5" fill="#00a859"/>
+      <text x="${p[0]}" y="${H - 2}" text-anchor="middle" font-size="9" fill="#9a9a94" font-family="DM Sans, sans-serif">${dados[i].mes.split(' ')[0].substring(0,3)}</text>
+      <text x="${p[0]}" y="${p[1] - 7}" text-anchor="middle" font-size="9" fill="#007a40" font-family="DM Sans, sans-serif" font-weight="500">${dados[i].preco.toFixed(0)}</text>
+    `).join('')}
+  `;
+}
+
+// ── SUBSCRIÇÃO ALERTA ──
+function subscrever() {
+  const email = document.getElementById('alert-email').value;
+  if (!email || !email.includes('@')) {
+    document.getElementById('alert-email').focus();
+    return;
+  }
+  // Aqui integrará com o seu serviço de email (ex: Mailchimp, EmailJS, etc.)
+  document.getElementById('alert-msg').style.display = 'block';
+  document.getElementById('alert-email').value = '';
+}
+
+// ── INIT ──
+mostrarTimestamp();
+renderCards();
+renderHistorico();
+
+// Enter na calculadora
+document.getElementById('calc-litros').addEventListener('keydown', e => {
+  if (e.key === 'Enter') calcular();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sobre Nós | CombustívelMZ</title>
+<meta name="description" content="Saiba mais sobre o CombustívelMZ, o site de referência para preços de combustível em Moçambique.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #00a859;
+    --green-dark: #007a40;
+    --green-light: #e6f7ef;
+    --black: #111111;
+    --gray-100: #f5f5f3;
+    --gray-200: #e8e8e4;
+    --gray-400: #9a9a94;
+    --gray-600: #555550;
+    --white: #ffffff;
+    --radius: 12px;
+    --radius-sm: 8px;
+    --shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--gray-100); color: var(--black); font-size: 15px; line-height: 1.7; }
+
+  header { background: var(--black); padding: 0 1.5rem; border-bottom: 3px solid var(--green); }
+  .header-inner { max-width: 1000px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 60px; }
+  .logo { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 20px; color: var(--white); text-decoration: none; display: flex; align-items: center; gap: 8px; }
+  .logo span { color: var(--green); }
+  nav { display: flex; gap: 20px; }
+  nav a { color: #aaa; font-size: 13px; text-decoration: none; transition: color 0.15s; }
+  nav a:hover { color: var(--white); }
+
+  /* Banners de anúncios limpos */
+  .ad-banner {
+    background: var(--gray-200);
+    text-align: center;
+    padding: 10px;
+    font-size: 11px;
+    color: var(--gray-400);
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .page-hero { background: var(--black); padding: 2.5rem 1.5rem; color: var(--white); }
+  .page-hero-inner { max-width: 1000px; margin: 0 auto; }
+  .page-hero h1 { font-family: 'Syne', sans-serif; font-size: 30px; font-weight: 700; margin-bottom: 8px; }
+  .page-hero h1 em { color: var(--green); font-style: normal; }
+  .page-hero p { color: #aaa; font-size: 14px; }
+
+  .main { max-width: 700px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+
+  .card { background: var(--white); border-radius: var(--radius); border: 1px solid var(--gray-200); padding: 2rem; margin-bottom: 1.5rem; box-shadow: var(--shadow); }
+  .card h2 { font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 600; margin-bottom: 1rem; color: var(--black); }
+  .card p { color: var(--gray-600); margin-bottom: 1rem; }
+  .card p:last-child { margin-bottom: 0; }
+
+  .values-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 1rem; }
+  .value-item { background: var(--green-light); border-radius: var(--radius-sm); padding: 1rem; }
+  .value-icon { font-size: 22px; margin-bottom: 6px; }
+  .value-title { font-weight: 500; font-size: 14px; color: var(--green-dark); margin-bottom: 4px; }
+  .value-desc { font-size: 13px; color: var(--gray-600); }
+
+  /* Estatísticas / Números */
+  .stats-row { display: flex; gap: 12px; margin-top: 1rem; flex-wrap: wrap; }
+  .stat-box { flex: 1; min-width: 120px; background: var(--gray-100); border-radius: var(--radius-sm); padding: 1rem; text-align: center; }
+  .stat-num { font-family: 'Syne', sans-serif; font-size: 24px; font-weight: 700; color: var(--green-dark); margin-bottom: 2px; }
+  .stat-desc { font-size: 12px; color: var(--gray-400); }
+
+  .source-box { background: var(--gray-100); border-radius: var(--radius-sm); border-left: 3px solid var(--green); padding: 1rem; margin-top: 1rem; font-size: 13px; color: var(--gray-600); }
+  .source-box strong { color: var(--black); }
+
+  .contact-card { background: var(--black); border-radius: var(--radius); padding: 2rem; color: var(--white); text-align: center; }
+  .contact-card h2 { font-family: 'Syne', sans-serif; font-size: 18px; margin-bottom: 8px; }
+  .contact-card p { color: #aaa; font-size: 14px; margin-bottom: 1.25rem; }
+  .contact-email { display: inline-block; background: var(--green); color: var(--white); padding: 10px 24px; border-radius: var(--radius-sm); font-weight: 500; text-decoration: none; font-size: 14px; transition: background 0.15s; }
+  .contact-email:hover { background: var(--green-dark); }
+
+  footer { background: var(--black); color: #888; font-size: 12px; padding: 1.5rem; text-align: center; line-height: 1.8; }
+  footer strong { color: var(--white); }
+  footer a { color: #888; text-decoration: none; }
+  footer a:hover { color: #aaa; }
+
+  @media (max-width: 500px) { .values-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo">🇲🇿 Combustível<span>MZ</span></a>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="privacidade.html">Privacidade</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ADSENSE TOPO — substituir pelo código do Google AdSense quando aprovado -->
+<div class="ad-banner">
+  <!-- Cole aqui o código ins do Google AdSense -->
+</div>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <h1>Sobre o <em>CombustívelMZ</em></h1>
+    <p>Conheça a nossa missão e o que nos move todos os dias</p>
+  </div>
+</div>
+
+<div class="main">
+
+  <div class="card">
+    <h2>O que é o CombustívelMZ?</h2>
+    <p>O <strong>CombustívelMZ</strong> é um serviço de informação pública criado para ajudar os moçambicanos a consultar facilmente os preços oficiais de combustível em todo o país.</p>
+    <p>Sabemos que encontrar esta informação pode ser difícil — os preços mudam todo mês e os documentos oficiais nem sempre são acessíveis. Por isso criámos este site: simples, rápido e sempre actualizado.</p>
+    <p>O nosso serviço é completamente <strong>gratuito</strong> e sempre será.</p>
+    <div class="stats-row">
+      <div class="stat-box">
+        <div class="stat-num">5</div>
+        <div class="stat-desc">Zonas cobertas</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">4</div>
+        <div class="stat-desc">Tipos de combustível</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">Mensal</div>
+        <div class="stat-desc">Frequência de actualização</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>A nossa missão</h2>
+    <p>Tornar a informação pública verdadeiramente pública — acessível a qualquer moçambicano, em qualquer zona do país, sem complicações.</p>
+    <div class="values-grid">
+      <div class="value-item">
+        <div class="value-icon">✅</div>
+        <div class="value-title">Rigor</div>
+        <div class="value-desc">Preços baseados nos dados oficiais do Conselho de Ministros</div>
+      </div>
+      <div class="value-item">
+        <div class="value-icon">⚡</div>
+        <div class="value-title">Rapidez</div>
+        <div class="value-desc">Actualizamos os preços logo que são publicados</div>
+      </div>
+      <div class="value-item">
+        <div class="value-icon">📱</div>
+        <div class="value-title">Acessibilidade</div>
+        <div class="value-desc">Funciona bem em qualquer telemóvel, mesmo com internet lenta</div>
+      </div>
+      <div class="value-item">
+        <div class="value-icon">🆓</div>
+        <div class="value-title">Gratuito</div>
+        <div class="value-desc">Sempre grátis para todos os utilizadores</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>De onde vêm os dados?</h2>
+    <p>Todos os preços publicados neste site são baseados nas tabelas oficiais divulgadas mensalmente pelo <strong>Conselho de Ministros de Moçambique</strong> através do Ministério dos Recursos Minerais e Energia.</p>
+    <p>Os dados são inseridos manualmente após cada publicação oficial. Apesar do nosso compromisso com a exactidão, recomendamos sempre confirmar os preços no posto de combustível antes de abastecer.</p>
+    <div class="source-box">
+      <strong>Fonte oficial:</strong> Boletim da República de Moçambique — Publicação do Conselho de Ministros sobre regulação de preços de combustíveis.
+    </div>
+  </div>
+
+  <div class="contact-card">
+    <h2>Fale connosco</h2>
+    <p>Tem sugestões, encontrou um erro nos preços ou quer colaborar? Contacte-nos.</p>
+    <a href="mailto:combustivelmz@gmail.com" class="contact-email">combustivelmz@gmail.com</a>
+  </div>
+
+</div>
+
+<!-- ADSENSE RODAPÉ — substituir pelo código do Google AdSense quando aprovado -->
+<div class="ad-banner">
+  <!-- Cole aqui o código ins do Google AdSense -->
+</div>
+
+<footer>
+  <strong>CombustívelMZ</strong> — Preços Oficiais de Combustível em Moçambique<br>
+  Fonte: Conselho de Ministros de Moçambique · Boletim da República<br>
+  <span>© 2026 CombustívelMZ · <a href="privacidade.html">Política de Privacidade</a></span>
+</footer>
+
+</body>
+</html>
